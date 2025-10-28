@@ -1,0 +1,53 @@
+# Backend files (not needed for frontend deployment)
+backend/
+
+# Data files
+data/
+datasets/
+*.csv
+*.h5
+*.pth
+*.pkl
+
+# Python files
+*.py
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.local
+
+# Node modules (will be installed during build)
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Logs
+*.log
+logs/
+
+# Test files
+test_results/
+reports/
+coverage/
+
+# Documentation
+*.md
+!README.md
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+

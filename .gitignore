@@ -1,0 +1,192 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+
+# Node modules
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+frontend/build/
+frontend/dist/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite3
+
+# Model weights and data
+backend/models/weights/*.h5
+backend/models/weights/*.pth
+backend/models/weights/*.pt
+backend/models/weights/*.pkl
+data/
+data/raw/
+data/processed/
+data/synthetic/
+datasets/
+*.csv
+*.npy
+*.npz
+
+# Test reports
+reports/
+test_results/
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation (keep only main DOCUMENTATION.md)
+BACKEND_IMPLEMENTATION_COMPLETE.md
+CLERK_IMPLEMENTATION_GUIDE.md
+COMPLETE_GUIDE.md
+COMPLETE_IMPLEMENTATION_STATUS.md
+CURRENT_STATUS_AND_NEXT_STEPS.md
+DELIVERY_REPORT.md
+ENHANCEMENTS_COMPLETE.md
+FILE_STRUCTURE.md
+FINAL_IMPLEMENTATION_STATUS.md
+FINAL_STATUS_REPORT.md
+FRONTEND_IMPLEMENTATION_COMPLETE.md
+IMPLEMENTATION_COMPLETE.md
+IMPLEMENTATION_STATUS.md
+NEXT_STEPS.md
+PROJECT_STATUS.md
+TECH_STACK_VERIFICATION.md
+TEST_SUITE_COMPLETE.md
+TESTING_GUIDE.md
+TODO.md
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.iso
+*.dmg
+
+# Media files (except small icons)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.wav
+*.mp3
+
+# Sensitive data
+secrets/
+credentials/
+*.pem
+*.key
+*.cert
+
+# Cache
+.cache/
+.parcel-cache/
+.next/
+out/
+
+# Vercel
+.vercel
+
+# Railway
+.railway/
+
+# Heroku
+.heroku/
+
+# AWS
+.aws/
+.elasticbeanstalk/
+
+# Google Cloud
+.gcloud/
+google-credentials.json
+service-account.json
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
+.npm
+.eslintcache
+.stylelintcache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
