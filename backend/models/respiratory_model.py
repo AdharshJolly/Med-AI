@@ -389,6 +389,14 @@ def calculate_cam_visualization(model: RespiratoryModel, image_path: str, save_p
     return model.generate_cam(image_path, save_path)
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str, epochs: int = 25, batch_size: int = 32) -> dict:
+    """Train RespiratoryModel and return accuracy in a dict."""
+    model = RespiratoryModel()
+    acc = model.train(data_path, epochs=epochs, batch_size=batch_size)
+    return {"accuracy": acc}
+
 if __name__ == "__main__":
     model = RespiratoryModel()
     logger.info("✅ Respiratory model module ready with CAM visualization")

@@ -220,6 +220,14 @@ class GastroModel:
         self.label_encoder = joblib.load(f"{path}/label_encoder.pkl")
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str, epochs: int = 100) -> dict:
+    """Train GastroModel and return accuracy in a dict."""
+    model = GastroModel()
+    acc = model.train(data_path, epochs=epochs)
+    return {"accuracy": acc}
+
 import torch
 
 if __name__ == "__main__":

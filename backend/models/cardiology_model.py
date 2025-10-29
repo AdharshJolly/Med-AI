@@ -343,8 +343,15 @@ class CardiologyModel:
         self.model.eval()
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str, epochs: int = 50, batch_size: int = 32) -> dict:
+    """Train CardiologyModel and return accuracy in a dict."""
+    model = CardiologyModel()
+    acc = model.train(data_path, epochs=epochs, batch_size=batch_size)
+    return {"accuracy": acc}
+
 if __name__ == "__main__":
-    # Initialize and train model
     model = CardiologyModel()
     # model.train('data/cardiology/ptb-xl', epochs=50)
     logger.info("✅ Cardiology model module ready")

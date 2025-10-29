@@ -290,9 +290,24 @@ class MedicalRouter:
         self.tokenizer = BertTokenizer.from_pretrained(path)
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str, epochs: int = 3) -> dict:
+    """Train MedicalRouter and return accuracy in a dict."""
+    import pandas as pd
+    model = MedicalRouter()
+    # Expecting data_path to be a CSV with 'text' and 'label' columns
+    df = pd.read_csv(data_path)
+    training_data = [
+        {"text": row["text"], "label": int(row["label"])}
+        for _, row in df.iterrows()
+    ]
+    model.train(training_data, epochs=epochs)
+    # No direct accuracy, so return empty dict or implement validation if available
+    return {"accuracy": None}
+
 if __name__ == "__main__":
     router = MedicalRouter()
-    
     # Test routing
     test_cases = [
         "I have chest pain and palpitations",
@@ -301,11 +316,9 @@ if __name__ == "__main__":
         "My ankle is swollen after a fall",
         "I have severe abdominal pain and nausea"
     ]
-    
     for case in test_cases:
         result = router.route(case)
         print(f"Input: {case}")
         print(f"Routed to: {result['specialty']} (confidence: {result['confidence']:.2f})\n")
-    
     logger.info("✅ Router model module ready")
 

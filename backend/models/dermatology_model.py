@@ -312,6 +312,14 @@ class DermatologyModel:
         self.model.eval()
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str, epochs: int = 30, batch_size: int = 16) -> dict:
+    """Train DermatologyModel and return accuracy in a dict."""
+    model = DermatologyModel()
+    acc = model.train(data_path, epochs=epochs, batch_size=batch_size)
+    return {"accuracy": acc}
+
 if __name__ == "__main__":
     model = DermatologyModel()
     logger.info("✅ Dermatology model module ready")

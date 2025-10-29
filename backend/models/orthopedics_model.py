@@ -225,6 +225,14 @@ class OrthopedicsModel:
         self.model.eval()
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str, epochs: int = 20, batch_size: int = 32) -> dict:
+    """Train OrthopedicsModel and return accuracy in a dict."""
+    model = OrthopedicsModel()
+    acc = model.train(data_path, epochs=epochs, batch_size=batch_size)
+    return {"accuracy": acc}
+
 if __name__ == "__main__":
     model = OrthopedicsModel()
     logger.info("✅ Orthopedics model module ready")

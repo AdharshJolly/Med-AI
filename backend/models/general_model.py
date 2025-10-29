@@ -242,6 +242,14 @@ class GeneralModel:
         self.disease_encoder = joblib.load(f"{path}/disease_encoder.pkl")
 
 
+
+# Orchestrator-compatible training function
+def train_model(data_path: str) -> dict:
+    """Train GeneralModel and return accuracy in a dict."""
+    model = GeneralModel()
+    acc = model.train(data_path)
+    return {"accuracy": acc}
+
 if __name__ == "__main__":
     model = GeneralModel()
     logger.info("✅ General model module ready")

@@ -1,0 +1,56 @@
+{
+  "ml_models": {
+    "cardiology": "PASS",
+    "dermatology": "PASS",
+    "respiratory": "PASS",
+    "orthopedics": "PASS",
+    "gastroenterology": "PASS",
+    "general_medicine": "PASS",
+    "router": "PASS",
+    "average_accuracy": 86.76352538016704
+  },
+  "multi_input": {
+    "image": "PASS",
+    "text": "PASS",
+    "medical_readings": "PASS",
+    "user_profile": "PASS",
+    "iot_signals": "PASS"
+  },
+  "user_profile": {
+    "age": "PASS",
+    "gender": "PASS",
+    "blood_group": "PASS",
+    "height": "PASS",
+    "weight": "PASS",
+    "previous_medical_records": "PASS",
+    "present_medications": "PASS",
+    "allergies": "PASS",
+    "family_history": "PASS",
+    "chronic_conditions": "PASS"
+  },
+  "backend_api": {
+    "server": "NOT_RUNNING"
+  },
+  "frontend": {
+    "directory": "PASS",
+    "package_json": "PASS",
+    "server": "NOT_RUNNING",
+    "pages": 0
+  },
+  "chatbot": {
+    "directory": "PASS",
+    "nlp_engine.py": "PASS",
+    "sentiment_analyzer.py": "PASS",
+    "voice_handler.py": "PASS"
+  },
+  "maps": {
+    "directory": "PASS",
+    "location_service": "PASS"
+  },
+  "database": {
+    "UserProfile": "PASS",
+    "Diagnosis": "PASS",
+    "ChatSession": "PASS",
+    "ChatMessage": "PASS"
+  }
+}
